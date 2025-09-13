@@ -27,13 +27,14 @@ section { padding: 6rem 0; overflow-x: hidden; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* --- BOTONES --- */
-.btn { display: inline-block; padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; text-decoration:none; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; text-decoration:none; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; }
 .btn-primary { border-color: var(--primary-accent); color: var(--primary-accent); }
 .btn-primary:hover { background-color: var(--primary-accent); color: var(--bg-dark); }
 .btn-vibrant { background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent)); color: var(--bg-dark); font-weight: 700; }
 .btn-vibrant:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(34, 211, 238, 0.2); }
 .btn-secondary { background-color: var(--bg-card); color: var(--text-light); border-color: var(--border-color); }
 .btn-secondary:hover { background-color: var(--primary-accent); color: var(--bg-dark); border-color: var(--primary-accent); }
+.btn i { font-size: 1.2rem; }
 
 /* --- HEADER --- */
 .header { background-color: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); }
@@ -118,6 +119,15 @@ section { padding: 6rem 0; overflow-x: hidden; }
 .payment-icons img { height: 40px; filter: grayscale(1) brightness(1.5); transition: filter 0.3s; }
 .payment-icons img:hover { filter: none; }
 
+/* --- BLOQUE AÑADIDO PARA BOTONES DE CONTACTO --- */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem; /* Aumenta el espacio antes de los métodos de pago */
+}
+
 /* --- FOOTER --- */
 .footer { text-align: center; padding: 2rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); }
 
@@ -136,4 +146,3 @@ section { padding: 6rem 0; overflow-x: hidden; }
     .lead-magnet { flex-direction: column; text-align: center; }
     .lead-magnet .btn { margin-left: 0; margin-top: 1rem; }
 }
-
